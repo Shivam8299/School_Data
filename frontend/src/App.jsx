@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import React from "react"
+import AllSchools from "./Components/AllSchools"
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <> 
-    <h1 className='text-white bg-zinc-600'>Jay Sree Ram</h1>
+      <AllSchools/>
     </>
   )
 }
