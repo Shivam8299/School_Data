@@ -24,12 +24,12 @@ db.connect((err) => {
     }
 });
 
-// app.get('/', (req,res)=>{
-//     res.send("welcome to home page")
-// })
+app.get('/', (req,res)=>{
+    res.send("welcome to home page")
+})
 // +++++++++++++++fetch data+++++++++++
 
-app.get('/',(req,res)=>{
+app.get('/school',(req,res)=>{
     const sql = 'SELECT * FROM School_data'
     db.query(sql, (error, data)=>{
         if(error) return res.json(error);
@@ -38,8 +38,8 @@ app.get('/',(req,res)=>{
 })
 
 //  +++++++++++++++ add new school data +++++++++++++++
-// school/new/register
-app.post("/",(req, res)=>{
+
+app.post("/school/new/register",(req, res)=>{
     
     const {name, address, city, state, contact, image, email_id} = req.body;
     // console.log(req.body);
