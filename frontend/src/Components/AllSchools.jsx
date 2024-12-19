@@ -4,7 +4,7 @@ function AllSchools() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8080/school')
+    fetch('http://localhost:8080/')
       .then(res => res.json())
       .then(data => setData(data))
       .catch(error => console.log(error));
