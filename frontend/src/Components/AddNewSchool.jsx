@@ -30,9 +30,9 @@ function AddNewSchool() {
       image: formValue.image,
       email_id: formValue.email_id,
     };
-    // school/new/register
+
     try {
-      let res = await fetch("http://localhost:8080/", {
+      let res = await fetch("http://localhost:8080/school/new/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
